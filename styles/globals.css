@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .icon {
+    @apply w-full p-6 mt-1  text-[#44519E] hover:bg-[#44519E] hover:text-white active:text-gray-500;
+  }
+  .recent_news {
+    @apply flex flex-col w-full hover:bg-[#F9F9FC];
+  }
+  .publish_at {
+    @apply text-[#44519E] text-sm font-bold flex w-full pl-4 p-2;
+  }
+  .publish_title {
+    @apply flex flex-wrap text-gray-500 p-4 hover:text-[#44519E] hover:font-bold active:text-gray-500;
+  }
+  .publish_author {
+    @apply flex flex-wrap justify-end text-[#44519E] p-2 pr-4 font-semibold text-right;
+  }
+  .nav_option {
+    @apply flex font-bold p-6  text-center w-full ml-2 rounded-md text-[#44519E] hover:bg-[#44519E] hover:text-white active:text-gray-500;
+  }
+  .post_title {
+    @apply flex flex-wrap text-gray-500 p-4;
+  }
+  .btn {
+    @apply text-[#44519E] flex justify-center font-bold border-solid border-2 hover:bg-[#44519E] hover:border-[#44519E] hover:text-white rounded-lg;
+  }
+  .title {
+    @apply text-[#44519E] font-bold ml-4;
+  }
+  .active {
+    @apply bg-[#44519E] text-white;
+  }
+}
