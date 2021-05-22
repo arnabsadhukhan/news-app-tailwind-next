@@ -22,14 +22,14 @@ export async function getServerSideProps(context) {
   let main_data = null;
   await axios
     .get(
-      "https://newsapi.org/v2/top-headlines?country=in&apiKey=3a06f40f2c6e4c37b86c5998e7c445b7"
+      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.API_KEY}`
     )
     .then((d) => {
       data = d.data;
     });
   await axios
     .get(
-      "https://newsapi.org/v2/top-headlines?country=de&category=general&apiKey=3a06f40f2c6e4c37b86c5998e7c445b7"
+      `https://newsapi.org/v2/top-headlines?country=de&category=general&apiKey=${process.env.API_KEY}`
     )
     .then((d) => {
       main_data = d.data;
