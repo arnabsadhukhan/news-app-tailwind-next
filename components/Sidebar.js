@@ -29,7 +29,7 @@ function Sidebar({ data }) {
           <ChevronDoubleDownIcon className="icon animate-bounce" />
         </div>
       </div>
-      <div className="bg-[#F1F1F9] h-screen w-full overflow-scroll overflow-x-hidden">
+      <div className="bg-[#F1F1F9] h-screen w-full overflow-scroll scrollbar-hide overflow-x-hidden">
         <header className=" flex h-20 bg-[#F1F1F9] min-w-[20rem] border-b-2 justify-between sticky top-0 z-10  ">
           <p className="  text-[#44519E] text-lg font-[Roboto] font-semibold flex justify-left pl-4 items-center h-full   ">
             Recent News

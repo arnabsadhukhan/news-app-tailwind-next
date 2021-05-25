@@ -13,9 +13,14 @@ function Main({ data, type }) {
   const [navToggle, setnavToggle] = useState(true);
 
   return (
-    <main className="flex flex-col  overflow-y-hidden overflow-x-hidden">
-      <header className="flex justify-between">
-        <button className="hidden lg:flex w-6 ml-4 items-center justify-center focus:outline-none mt-4">
+    <main className="flex flex-col  overflow-y-hidden">
+      <header className="flex justify-between ">
+        <button
+          className="hidden lg:flex w-6 ml-4 items-center justify-center focus:outline-none mt-4"
+          onClick={() => {
+            !setnavToggle(!navToggle);
+          }}
+        >
           {navToggle ? (
             <MenuAlt1Icon className="btn" />
           ) : (
@@ -24,7 +29,7 @@ function Main({ data, type }) {
         </button>
         <div></div>
         {navToggle ? (
-          <div className="flex mr-10 mt-2 ">
+          <div className="flex mr-10 mt-2  overflow-x-scroll scrollbar-hide">
             <p className={"nav_option " + (type === "general" ? "active" : "")}>
               <Link href="/">General</Link>
             </p>
@@ -51,7 +56,7 @@ function Main({ data, type }) {
           Main <span className="font-normal">news</span>
         </p>
       </div>
-      <div className="flex flex-wrap justify-center   md:ml-20  overflow-y-scroll">
+      <div className="flex flex-wrap justify-center   md:ml-20  overflow-y-scroll scrollbar-hide">
         {data.articles.map((article) => (
           <Post key={article.title} {...article} />
         ))}
